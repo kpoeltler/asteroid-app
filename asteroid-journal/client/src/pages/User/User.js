@@ -92,7 +92,7 @@ export default User;
 // }
 
 // loadObservations = () => {
-//   axios.getObservations()
+//   axios.get()
 //     .then(res =>
 //       this.setState({ observations: res.data, asteroid: "", star: "", reflection: "" })
 //     )

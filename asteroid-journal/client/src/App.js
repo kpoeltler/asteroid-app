@@ -13,8 +13,8 @@ const App = () =>
       <Nav />
       <Switch>
         <Route exact path="/" component={User} />
-        <Route exact path="/observations" component={Observations} />
-        <Route exact path="/observations/:id" component={Journal} />  
+        <Route exact path="/observation" component={Observations} />
+        <Route exact path="/observation/:id" component={Journal} />  
         //not sure what that is for :id
         
       </Switch>

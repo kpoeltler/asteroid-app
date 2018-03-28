@@ -15,7 +15,7 @@ class Journal extends Component {
   // When this component mounts, grab the observation with the _id of this.props.match.params.id
   // e.g. localhost:3000/observations/599dcb67f0f16317844583fc
   componentDidMount() {
-    API.getObservations(this.props.match.params.id)
+    API.get(this.props.match.params.id)
       .then(res => this.setState({ Observation: res.data }))
       .catch(err => console.log(err));
   }
@@ -36,7 +36,7 @@ class Journal extends Component {
             <article>
               <h1>Synopsis</h1>
               <p>
-                {this.state.Observations.synopsis}
+                {this.state..synopsis}
               </p>
             </article>
           </Col>
