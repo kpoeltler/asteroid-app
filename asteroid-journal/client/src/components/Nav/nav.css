@@ -1,0 +1,11 @@
+
+
+
+@font-face {font-family:'futuroNormal';
+    src:url('../../futuroNormal.otf');
+    } 
+    h1{
+        font-family:'futuroNormal';
+        letter-spacing: 8px;
+    }
+    /* .navbar-brand  */
