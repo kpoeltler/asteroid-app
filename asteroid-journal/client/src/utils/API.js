@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all observations
-  getObservation: function() {
+  getObservations: function() {
     return axios.get("/api/observation");
   },
   // Gets the observations with the given id

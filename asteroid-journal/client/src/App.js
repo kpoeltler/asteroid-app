@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Observations from "./pages/Observations";
 import Journal from "./pages/Journal";
@@ -15,10 +15,10 @@ const App = () =>
         <Route exact path="/" component={User} />
         <Route exact path="/observation" component={Observations} />
         <Route exact path="/observation/:id" component={Journal} />  
-        //not sure what that is for :id
+        
         
       </Switch>
     </div>
-  </Router>;
+  </Router>
 
 export default App;

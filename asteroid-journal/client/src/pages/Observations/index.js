@@ -1,4 +1,4 @@
-export { default } from "./Observations.js";
+export { default } from "./Observations";
 
 
 

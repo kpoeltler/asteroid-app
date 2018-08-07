@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
+//import { Link } from "react-router-dom";
+//import { Col, Row, Container } from "../../components/Grid";
+//import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-import { Input, TextArea, FormBtn } from "../../components/Form";
-import Axios from "axios";
-import Date from "../../components/Date";
+//import { Input, TextArea, FormBtn } from "../../components/Form";
+//import Axios from "axios";
+//import Date from "../../components/Date";
 
 class Journal extends Component {
   state = {
@@ -16,7 +16,7 @@ class Journal extends Component {
   // e.g. localhost:3000/observations/599dcb67f0f16317844583fc
   componentDidMount() {
     API.get(this.props.match.params.id)
-      .then(res => this.setState({ Observation: res.data }))
+      .then(res => this.setState({ observation: res.data }))
       .catch(err => console.log(err));
   }
 

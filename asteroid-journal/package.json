@@ -11,7 +11,7 @@
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn",
-    "homepage": "http://kpoeltler.github.io/outer-space-journal-app"
+    "homepage": "http://kpoeltler.github.io/asteroid-app"
   },
   "author": "",
   "license": "ISC",

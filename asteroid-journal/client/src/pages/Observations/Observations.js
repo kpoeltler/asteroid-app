@@ -4,7 +4,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import Axios from "axios";
+// import Axios from "axios";
 
 // import App from "./App"
 
@@ -22,9 +22,10 @@ class Observations extends Component {
     }
 
     loadObservations = () => {
+      console.log("works");
       API.getObservations()
         .then(res =>
-          this.setState({ Observations: res.data, asteroid: "", orbit: "", reflection: "" })
+          this.setState({ observations: res.data, asteroid: "", orbit: "", reflection: "" },()=>{console.log("State was updated i think?")})
         )
         .catch(err => console.log(err));
     };
@@ -63,23 +64,22 @@ class Observations extends Component {
         <Row>
           <Col size="sm-12">
             <Jumbotron>
-              
               <form>
                 <Input
                   name="asteroid"
-                  onChange={this.handleInputChange.bind(this)}
+                  onChange={this.handleInputChange}
                   placeholder="Asteroid's name"
                 />
               
                 <Input
                   name="orbit"
-                  onChange={this.handleInputChange.bind()}
+                  onChange={this.handleInputChange}
                   placeholder="Which orbit? Atira, Inner or Outer Main-belt, TransNeptunian, Aten, Parabolic, Hyperbolic, Amor, Jupiter Trojan, Mars-crossing, or Centaur"
                 />
 
                 <TextArea
                   name="reflection"
-                  onChange={this.handleInputChange.bind(this)}
+                  onChange={this.handleInputChange}
                   placeholder="Reflection"
                 />
                 <FormBtn
@@ -89,7 +89,6 @@ class Observations extends Component {
                   Submit Entry
                 </FormBtn>
               </form>
-            
             </Jumbotron>
           </Col>
         </Row>

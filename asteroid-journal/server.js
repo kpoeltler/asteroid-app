@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const ObjectID = require('mongodb').ObjectID;
 const User = require("./models/user");
 
@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 // });
 
 // **Serve up static assets
-app.use(express.static("public"));
+app.use(express.static("client/build"));
 
 
 
@@ -33,15 +33,16 @@ app.use(routes);
 mongoose.Promise = global.Promise;
 
 // **Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URL || "mongodb://kpoeltler:bootcamp@ds139869.mlab.com:39869/heroku_6lfl8nwd",
-  {
-    useMongoClient: true
-  }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URL || "mongodb://localhost/entries",
+//   {
+//     useMongoClient: true
+//   }
+// );
 
 // **Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
+// "mongodb://kpoeltler:bootcamp@ds139869.mlab.com:39869/heroku_6lfl8nwd",
